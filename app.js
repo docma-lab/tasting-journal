@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id), main=$("main"), status=$("status");
 const DB="tasting-journal-v12", STORE="vault", ITER=310000; let key=null, salt=null, entries=[], page="home";
 function msg(s){status.textContent=s}
-function dbopen(){return new Promise((resolve,reject)=>{let req=indexedDB.open(DB,1);req.onupgradeneeded=()=>req.result.createObjectStore(STORE);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error})}
+function dbopen(){return new Promise((resolve,reject)=>{let req=indexedDB.open(DB,1);req.onupgradeneeded=()=>req.result.createObjectStore(STORE);req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
 async function getbox(){let d=await dbopen();return new Promise((r,j)=>{let q=d.transaction(STORE).objectStore(STORE).get("box");q.onsuccess=()=>r(q.result||null);q.onerror=()=>j(q.error)})}
 async function putbox(box){let d=await dbopen();return new Promise((r,j)=>{let t=d.transaction(STORE,"readwrite");t.objectStore(STORE).put(box,"box");t.oncomplete=()=>r();t.onerror=()=>j(t.error)})}
 function b64(a){return btoa(String.fromCharCode(...new Uint8Array(a)))}
