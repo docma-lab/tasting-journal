@@ -1,14 +1,4 @@
-The Tasting Journal v1.1
-- Cross-device responsive web app (iPad/iPhone/Android/desktop)
-- Apple Pencil / touch handwriting canvas on entries
-- AES-GCM encrypted vault, PBKDF2 password-derived key, IndexedDB
-- Encrypted export backup and import (password-protected ciphertext)
-- Offline shell/PWA intended for HTTPS hosting
-
-IMPORTANT: This is an experimental personal prototype, not audited security software.
-Use HTTPS hosting (e.g. GitHub Pages) or localhost. Web Crypto requires secure context.
-First launch: create an 8+ character passphrase, then confirm.
-Keep passphrase safe; forgotten passphrase cannot be recovered.
-Export backups regularly; encrypted backup is not a guarantee against device compromise.
-To test: upload the folder contents to a static HTTPS host, open on iPad Safari,
-Share > Add to Home Screen. Apple Pencil supports direct drawing in the sketch field.
+The Tasting Journal v1.2
+배포 방법: GitHub 저장소의 기존 파일을 이 묶음의 파일들로 교체한 뒤 Pages 배포.
+이번 버전은 초기 설정 오류를 화면에 표시하고, 비밀번호 확인/초기화 처리를 분리합니다.
+주의: 비밀번호를 잊으면 복구 불가. 아직 독립 보안 감사 및 iPad 실기 검증은 거치지 않은 실험적 앱입니다.

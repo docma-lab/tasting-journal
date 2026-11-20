@@ -1,9 +1,1 @@
-{
-  "name": "The Tasting Journal",
-  "short_name": "Tasting Journal",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#202721",
-  "theme_color": "#202721",
-  "icons": []
-}
+{"name":"The Tasting Journal","short_name":"Tasting Journal","start_url":"./","display":"standalone","background_color":"#202720","theme_color":"#202720","icons":[]}
